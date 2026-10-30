@@ -1,0 +1,6 @@
+defaults: [models/vit_b32_full, methods/ta]
+method: {scale: 0.2}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.1, 0.2, 0.3, 0.4, 0.5]

@@ -1,0 +1,6 @@
+defaults: [models/vit_l14_full, methods/com]
+method: {task_weights: none, scale: 1.25}
+search:
+  mode: grid
+  params:
+    method.scale: [1.25, 1.26, 1.27, 1.28, 1.29, 1.3]

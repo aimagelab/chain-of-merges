@@ -1,0 +1,8 @@
+defaults: [models/llama32_1b_full, methods/lines]
+method: {scale: 0.4, alpha: 0.4, beta: 0.0}
+search:
+  mode: grid
+  params:
+    method.scale: [0.2, 0.3, 0.4, 0.6, 0.8, 1.0]
+    method.alpha: [0.2, 0.4, 0.7]
+    method.beta: [0.0, 0.3, 0.7]

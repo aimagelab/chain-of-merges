@@ -1,0 +1,1 @@
+method: {name: fisher, scale: 1.0, fisher_normalize: per_task}

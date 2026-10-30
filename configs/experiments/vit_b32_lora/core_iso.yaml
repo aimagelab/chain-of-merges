@@ -1,0 +1,6 @@
+defaults: [models/vit_b32_lora, methods/core_iso]
+method: {scale: 0.9}
+search:
+  mode: grid
+  params:
+    method.scale: [0.6, 0.8, 0.9, 1.0, 1.1, 1.2, 1.4, 1.6]

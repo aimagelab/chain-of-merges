@@ -1,0 +1,8 @@
+defaults: [models/vit_b32_full, methods/fisher]
+method: {scale: 1.5, fisher_normalize: none}
+data:
+  calibration: {split: train, num_samples: all, batch_size: 32, seed: 420}
+search:
+  mode: grid
+  params:
+    method.scale: [0.8, 1.0, 1.25, 1.5, 2.0]

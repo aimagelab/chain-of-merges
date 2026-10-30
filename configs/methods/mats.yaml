@@ -1,0 +1,1 @@
+method: {name: mats, scale: 1.0, num_iterations: 36, fisher_normalize: per_task}

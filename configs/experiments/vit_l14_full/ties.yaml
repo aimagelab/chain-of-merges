@@ -1,0 +1,7 @@
+defaults: [models/vit_l14_full, methods/ties]
+method: {topk: 0.2, scale: 1.0}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.6, 0.8, 1.0, 1.2, 1.5]
+    method.topk: [0.1, 0.2, 0.3]

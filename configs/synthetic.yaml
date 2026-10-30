@@ -1,0 +1,184 @@
+methods:
+  dare_ties:
+    vit_b32_lora:
+    - {dare_p: 0.1, scale: 0.3}
+    - {dare_p: 0.1, scale: 0.5}
+    - {dare_p: 0.1, scale: 0.7}
+    - {dare_p: 0.1, scale: 0.9}
+    - {dare_p: 0.3, scale: 0.3}
+    - {dare_p: 0.3, scale: 0.5}
+    - {dare_p: 0.3, scale: 0.7}
+    - {dare_p: 0.3, scale: 0.9}
+    - {dare_p: 0.5, scale: 0.3}
+    - {dare_p: 0.5, scale: 0.5}
+    - {dare_p: 0.5, scale: 0.7}
+    - {dare_p: 0.5, scale: 0.9}
+    - {dare_p: 0.05, scale: 0.075}
+    - {dare_p: 0.05, scale: 0.15}
+    - {dare_p: 0.05, scale: 0.3}
+    - {dare_p: 0.05, scale: 0.5}
+    - {dare_p: 0.05, scale: 0.7}
+    - {dare_p: 0.05, scale: 0.9}
+    - {dare_p: 0.1, scale: 0.075}
+    - {dare_p: 0.1, scale: 0.15}
+    - {dare_p: 0.3, scale: 0.075}
+    - {dare_p: 0.3, scale: 0.15}
+    - {dare_p: 0.5, scale: 0.075}
+    - {dare_p: 0.5, scale: 0.15}
+    vit_l14_lora:
+    - {dare_p: 0.1, scale: 0.3}
+    - {dare_p: 0.1, scale: 0.5}
+    - {dare_p: 0.1, scale: 0.7}
+    - {dare_p: 0.3, scale: 0.3}
+    - {dare_p: 0.3, scale: 0.5}
+    - {dare_p: 0.3, scale: 0.7}
+    - {dare_p: 0.05, scale: 0.3}
+    - {dare_p: 0.1, scale: 0.15}
+    - {dare_p: 0.1, scale: 0.075}
+    - {dare_p: 0.05, scale: 0.5}
+    - {dare_p: 0.1, scale: 0.0375}
+    - {dare_p: 0.1, scale: 0.0187}
+  iso_c:
+    vit_b32_lora:
+    - {scale: 2.0}
+    - {scale: 3.0}
+    - {scale: 4.6}
+    - {scale: 6.0}
+    - {scale: 8.0}
+    - {scale: 10.0}
+    - {scale: 0.5}
+    - {scale: 1.0}
+    vit_l14_lora:
+    - {scale: 2.0}
+    - {scale: 3.0}
+    - {scale: 4.6}
+    - {scale: 6.0}
+    - {scale: 8.0}
+    - {scale: 1.0}
+    - {scale: 0.5}
+  core_iso:
+    vit_b32_lora:
+    - {scale: 0.5}
+    - {scale: 1.0}
+    - {scale: 2.0}
+    - {scale: 3.0}
+    - {scale: 4.0}
+    - {scale: 6.0}
+    - {scale: 0.125}
+    - {scale: 0.25}
+    vit_l14_lora:
+    - {scale: 0.5}
+    - {scale: 1.0}
+    - {scale: 2.0}
+    - {scale: 3.0}
+    - {scale: 4.0}
+    - {scale: 0.25}
+    - {scale: 0.125}
+    - {scale: 0.0625}
+    - {scale: 0.0312}
+  ta:
+    vit_b32_lora:
+    - {scale: 0.05}
+    - {scale: 0.1}
+    - {scale: 0.2}
+    - {scale: 0.3}
+    - {scale: 0.4}
+    - {scale: 0.5}
+    - {scale: 0.0125}
+    - {scale: 0.025}
+    - {scale: 0.0031}
+    - {scale: 0.0063}
+    vit_l14_lora:
+    - {scale: 0.05}
+    - {scale: 0.1}
+    - {scale: 0.2}
+    - {scale: 0.3}
+    - {scale: 0.5}
+    - {scale: 0.0125}
+    - {scale: 0.025}
+    - {scale: 0.0031}
+    - {scale: 0.0063}
+  ties:
+    vit_b32_lora:
+    - {topk: 0.1, scale: 0.1}
+    - {topk: 0.1, scale: 0.2}
+    - {topk: 0.1, scale: 0.3}
+    - {topk: 0.1, scale: 0.5}
+    - {topk: 0.1, scale: 0.8}
+    - {topk: 0.1, scale: 1.0}
+    - {topk: 0.2, scale: 0.1}
+    - {topk: 0.2, scale: 0.2}
+    - {topk: 0.2, scale: 0.3}
+    - {topk: 0.2, scale: 0.5}
+    - {topk: 0.2, scale: 0.8}
+    - {topk: 0.2, scale: 1.0}
+    - {topk: 0.3, scale: 0.1}
+    - {topk: 0.3, scale: 0.2}
+    - {topk: 0.3, scale: 0.3}
+    - {topk: 0.3, scale: 0.5}
+    - {topk: 0.3, scale: 0.8}
+    - {topk: 0.3, scale: 1.0}
+    - {topk: 0.025, scale: 0.025}
+    - {topk: 0.025, scale: 0.05}
+    - {topk: 0.025, scale: 0.1}
+    - {topk: 0.025, scale: 0.2}
+    - {topk: 0.025, scale: 0.3}
+    - {topk: 0.025, scale: 0.5}
+    - {topk: 0.025, scale: 0.8}
+    - {topk: 0.025, scale: 1.0}
+    - {topk: 0.05, scale: 0.025}
+    - {topk: 0.05, scale: 0.05}
+    - {topk: 0.05, scale: 0.1}
+    - {topk: 0.05, scale: 0.2}
+    - {topk: 0.05, scale: 0.3}
+    - {topk: 0.05, scale: 0.5}
+    - {topk: 0.05, scale: 0.8}
+    - {topk: 0.05, scale: 1.0}
+    - {topk: 0.1, scale: 0.025}
+    - {topk: 0.1, scale: 0.05}
+    - {topk: 0.2, scale: 0.025}
+    - {topk: 0.2, scale: 0.05}
+    - {topk: 0.3, scale: 0.025}
+    - {topk: 0.3, scale: 0.05}
+    vit_l14_lora:
+    - {topk: 0.2, scale: 0.1}
+    - {topk: 0.2, scale: 0.2}
+    - {topk: 0.2, scale: 0.3}
+    - {topk: 0.2, scale: 0.5}
+    - {topk: 0.3, scale: 0.1}
+    - {topk: 0.3, scale: 0.2}
+    - {topk: 0.3, scale: 0.3}
+    - {topk: 0.3, scale: 0.5}
+    - {topk: 0.05, scale: 0.025}
+    - {topk: 0.05, scale: 0.05}
+    - {topk: 0.05, scale: 0.1}
+    - {topk: 0.05, scale: 0.2}
+    - {topk: 0.05, scale: 0.3}
+    - {topk: 0.05, scale: 0.5}
+    - {topk: 0.45, scale: 0.1}
+    - {topk: 0.75, scale: 0.1}
+    - {topk: 0.025, scale: 0.1}
+    - {topk: 0.0125, scale: 0.1}
+  tsv:
+    vit_b32_lora:
+    - {scale: 0.2}
+    - {scale: 0.33}
+    - {scale: 0.5}
+    - {scale: 0.8}
+    - {scale: 1.0}
+    - {scale: 1.5}
+    - {scale: 0.05}
+    - {scale: 0.1}
+    - {scale: 0.0125}
+    - {scale: 0.025}
+    vit_l14_lora:
+    - {scale: 0.2}
+    - {scale: 0.33}
+    - {scale: 0.5}
+    - {scale: 0.8}
+    - {scale: 1.2}
+    - {scale: 0.1}
+    - {scale: 0.05}
+    - {scale: 0.025}
+    - {scale: 0.0125}
+regmean: {alpha: 0.9, normalize_by_tokens: false, normalize_features: false}

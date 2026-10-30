@@ -1,0 +1,8 @@
+defaults: [models/llama32_1b_full, methods/regmean]
+method: {alpha: 1.0, normalize_by_tokens: false, gram_cache: true}
+data:
+  calibration: {num_samples: all}
+search:
+  mode: grid
+  params:
+    method.alpha: [0.5, 0.7, 0.9, 1.0]

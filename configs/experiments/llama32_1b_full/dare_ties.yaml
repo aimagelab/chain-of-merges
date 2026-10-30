@@ -1,0 +1,7 @@
+defaults: [models/llama32_1b_full, methods/dare_ties]
+method: {scale: 0.2, dare_p: 0.9, dare_seed: 421}
+search:
+  mode: grid
+  params:
+    method.scale: [0.02, 0.05, 0.1, 0.15, 0.2, 0.3]
+    method.dare_p: [0.8, 0.9, 0.95, 0.98, 0.99]

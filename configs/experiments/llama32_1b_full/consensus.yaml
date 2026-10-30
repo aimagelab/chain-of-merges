@@ -1,0 +1,8 @@
+defaults: [models/llama32_1b_full, methods/consensus]
+method: {tall_threshold: 0.2, consensus_threshold: 2, scale: 0.15}
+search:
+  mode: grid
+  params:
+    method.scale: [0.05, 0.1, 0.15, 0.2, 0.3]
+    method.tall_threshold: [0.05, 0.1, 0.2, 0.3]
+    method.consensus_threshold: [1, 2, 3]

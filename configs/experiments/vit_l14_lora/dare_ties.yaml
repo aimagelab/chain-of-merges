@@ -1,0 +1,6 @@
+defaults: [models/vit_l14_lora, methods/dare_ties]
+method: {scale: 0.5, dare_p: 0.1}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.3, 0.5, 0.7, 0.9]

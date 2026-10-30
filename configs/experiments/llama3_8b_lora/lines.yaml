@@ -1,0 +1,8 @@
+defaults: [models/llama3_8b_lora, methods/lines]
+method: {scale: 0.6, alpha: 0.4, beta: 0.3}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.3, 0.4, 0.5, 0.8]
+    method.alpha: [0.3, 0.5, 0.7, 1.0]
+    method.beta: [0.0, 0.3, 0.5, 0.7, 1.0]

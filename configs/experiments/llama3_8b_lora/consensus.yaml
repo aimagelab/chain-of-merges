@@ -1,0 +1,8 @@
+defaults: [models/llama3_8b_lora, methods/consensus]
+method: {tall_threshold: 0.4, consensus_threshold: 2, scale: 0.6}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.3, 0.5, 0.75, 1.0, 1.25]
+    method.tall_threshold: [0.2, 0.4, 0.6, 1.0]
+    method.consensus_threshold: [2, 3, 4]

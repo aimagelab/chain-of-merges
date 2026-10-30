@@ -1,0 +1,8 @@
+defaults: [models/vit_b32_full, methods/regmean]
+method: {alpha: 1.0, normalize_by_tokens: false}
+data:
+  calibration: {split: train, num_samples: all, batch_size: 100, seed: 420}
+search:
+  mode: grid
+  params:
+    method.alpha: [0.5, 0.7, 0.9, 1.0]

@@ -1,0 +1,1 @@
+method: {name: regmean, alpha: 1.0, scale: 1.0, chain: false, task_weights: none, normalize_features: false, normalize_by_tokens: true, dtype: float32, pinv_rtol: 1.0e-6}

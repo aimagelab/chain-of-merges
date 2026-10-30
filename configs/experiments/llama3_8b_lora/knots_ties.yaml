@@ -1,0 +1,7 @@
+defaults: [models/llama3_8b_lora, methods/knots_ties]
+method: {topk: 0.3, scale: 1.0}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.3, 0.5, 0.8, 1.0, 1.5]
+    method.topk: [0.1, 0.2, 0.3, 1.0]

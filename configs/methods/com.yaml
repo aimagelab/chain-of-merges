@@ -1,0 +1,1 @@
+method: {name: com, alpha: 1.0, scale: 1.0, chain: true, task_weights: gram_offdiag, normalize_features: true, normalize_by_tokens: true, dtype: float32, pinv_rtol: 1.0e-6}

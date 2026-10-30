@@ -1,0 +1,8 @@
+defaults: [models/vit_b32_lora, methods/mats]
+method: {scale: 1.0, fisher_normalize: none, num_iterations: 36}
+data:
+  calibration: {split: train, num_samples: all, batch_size: 32, seed: 420}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.75, 1.0, 1.5, 2.0]

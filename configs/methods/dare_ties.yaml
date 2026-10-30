@@ -1,0 +1,1 @@
+method: {name: dare_ties, topk: 1.0, merging_type: mean, scale: 0.6, dare_p: 0.2, dare_seed: 424}

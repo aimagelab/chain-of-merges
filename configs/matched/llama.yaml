@@ -1,0 +1,20 @@
+methods: [ta, ties, dare_ties, tsv, knots_ties, lines, iso_c, consensus, core_tsv, core_iso, regmean, com]
+untuned: [regmean, com]
+grids:
+  ta: {scale: [0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.7, 1.0]}
+  ties: {scale: [0.2, 0.3, 0.4, 0.5, 0.6, 0.8, 1.0], topk: [0.1, 0.2, 0.3, 0.5]}
+  dare_ties: {scale: [0.3, 0.5, 0.7, 0.9], dare_p: [0.1, 0.2, 0.3]}
+  tsv: {scale: [0.1, 0.2, 0.33, 0.5, 0.7, 1.0, 1.5]}
+  knots_ties: {scale: [0.3, 0.4, 0.6, 0.8, 1.0], topk: [0.1, 0.2, 0.3]}
+  lines: {scale: [0.05, 0.1, 0.2, 0.3, 0.5], alpha: [0.5, 0.7, 1.0], beta: [0.0, 0.3, 0.5]}
+  iso_c: {scale: [0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0, 12.0, 16.0, 24.0, 32.0, 48.0, 64.0, 100.0]}
+  consensus: {scale: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8, 1.0], tall_threshold: [0.2, 0.4, 0.6], consensus_threshold: [2, 3, 4]}
+  core_tsv: {scale: [0.1, 0.2, 0.3, 0.4, 0.5, 0.65, 0.8, 1.0]}
+  core_iso: {scale: [0.4, 0.6, 0.8, 1.0, 1.2, 1.6, 2.0, 3.0, 4.0, 6.0, 8.0]}
+finetune:
+  lr_grid: [1.0e-7, 3.0e-7, 1.0e-6, 3.0e-6, 1.0e-5, 3.0e-5, 1.0e-4]
+  lr_start: [3.0e-6]
+  max_steps: 1000
+  eval_every: 50
+  patience: 5
+  batch_per_task: {llama32_1b_lora: 8}

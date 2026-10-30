@@ -1,0 +1,22 @@
+model:
+  family: llama
+  base: meta-llama/Meta-Llama-3-8B
+  finetune: lora
+  dtype: bfloat16
+  checkpoints:
+    - hoffman-lab/KnOTS-Llama3_8B_lora_R16_snli
+    - hoffman-lab/KnOTS-Llama3_8B_lora_R16_mnli
+    - hoffman-lab/KnOTS-Llama3_8B_lora_R16_sick
+    - hoffman-lab/KnOTS-Llama3_8B_lora_R16_qnli
+    - hoffman-lab/KnOTS-Llama3_8B_lora_R16_rte
+    - hoffman-lab/KnOTS-Llama3_8B_lora_R16_scitail
+  tasks: [snli, mnli, sick, qnli, rte, scitail]
+
+data:
+  root: data
+  batch_size: 32
+  calibration: {split: train, num_samples: 500, seed: 420}
+
+eval:
+  split: test
+  reference_acc: {snli: 92.498, mnli: 90.308, sick: 91.582, qnli: 94.485, rte: 89.855, scitail: 96.519}

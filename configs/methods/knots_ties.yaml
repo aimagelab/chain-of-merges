@@ -1,0 +1,1 @@
+method: {name: knots_ties, topk: 0.2, merging_type: mean, scale: 0.6}

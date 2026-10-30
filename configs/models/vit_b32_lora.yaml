@@ -1,0 +1,40 @@
+model:
+  family: clip
+  base: openai/clip-vit-base-patch32
+  finetune: lora
+  head_dir: ViT-B-32-CLIP
+  tasks:
+    - stanford_cars
+    - dtd
+    - eurosat
+    - gtsrb
+    - mnist
+    - resisc45
+    - sun397
+    - svhn
+  checkpoints:
+    - hoffman-lab/KnOTS-ViT-B-32_lora_R16_stanford_cars
+    - hoffman-lab/KnOTS-ViT-B-32_lora_R16_dtd
+    - hoffman-lab/KnOTS-ViT-B-32_lora_R16_eurosat
+    - hoffman-lab/KnOTS-ViT-B-32_lora_R16_gtsrb
+    - hoffman-lab/KnOTS-ViT-B-32_lora_R16_mnist
+    - hoffman-lab/KnOTS-ViT-B-32_lora_R16_resisc45
+    - hoffman-lab/KnOTS-ViT-B-32_lora_R16_sun397
+    - hoffman-lab/KnOTS-ViT-B-32_lora_R16_svhn
+data:
+  root: data
+  num_workers: 8
+  calibration: {split: val, num_samples: 500, seed: 420, batch_size: 100}
+eval:
+  split: test
+  batch_size: 128
+  reference_acc:
+    stanford_cars: 74.0
+    dtd: 58.3
+    eurosat: 99.0
+    gtsrb: 92.7
+    mnist: 99.3
+    resisc45: 88.4
+    sun397: 64.5
+    svhn: 96.2
+seed: 420

@@ -1,0 +1,6 @@
+defaults: [models/llama3_8b_lora, methods/core_iso]
+method: {scale: 3.0}
+search:
+  mode: grid
+  params:
+    method.scale: [1.5, 2, 2.5, 3, 3.5, 3.75, 4, 4.25, 4.5, 5, 6]

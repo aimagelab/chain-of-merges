@@ -1,0 +1,1 @@
+method: {name: consensus, tall_threshold: 0.4, consensus_threshold: 2, scale: 0.3}

@@ -1,0 +1,32 @@
+model:
+  family: clip
+  base: openai/clip-vit-base-patch32
+  finetune: openclip
+  head_dir: ViT-B-32-CLIP
+  tasks:
+    - stanford_cars
+    - dtd
+    - eurosat
+    - gtsrb
+    - mnist
+    - resisc45
+    - sun397
+    - svhn
+  checkpoints:
+    - nik-dim/tall_masks:single_task/ViT-B-32/CarsVal/nonlinear_finetuned.pt
+    - nik-dim/tall_masks:single_task/ViT-B-32/DTDVal/nonlinear_finetuned.pt
+    - nik-dim/tall_masks:single_task/ViT-B-32/EuroSATVal/nonlinear_finetuned.pt
+    - nik-dim/tall_masks:single_task/ViT-B-32/GTSRBVal/nonlinear_finetuned.pt
+    - nik-dim/tall_masks:single_task/ViT-B-32/MNISTVal/nonlinear_finetuned.pt
+    - nik-dim/tall_masks:single_task/ViT-B-32/RESISC45Val/nonlinear_finetuned.pt
+    - nik-dim/tall_masks:single_task/ViT-B-32/SUN397Val/nonlinear_finetuned.pt
+    - nik-dim/tall_masks:single_task/ViT-B-32/SVHNVal/nonlinear_finetuned.pt
+data:
+  root: data
+  num_workers: 8
+  calibration: {split: val, num_samples: 500, seed: 420, batch_size: 100}
+eval:
+  split: test
+  batch_size: 128
+  reference_acc: measured
+seed: 420

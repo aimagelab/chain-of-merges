@@ -1,0 +1,22 @@
+model:
+  family: llama
+  base: meta-llama/Llama-3.2-1B
+  finetune: full
+  dtype: float32
+  checkpoints:
+    - checkpoints/llama32_1b_full/snli
+    - checkpoints/llama32_1b_full/mnli
+    - checkpoints/llama32_1b_full/sick
+    - checkpoints/llama32_1b_full/qnli
+    - checkpoints/llama32_1b_full/rte
+    - checkpoints/llama32_1b_full/scitail
+  tasks: [snli, mnli, sick, qnli, rte, scitail]
+
+data:
+  root: data
+  batch_size: 16
+  calibration: {split: train, num_samples: 500, seed: 420}
+
+eval:
+  split: test
+  reference_acc: measured

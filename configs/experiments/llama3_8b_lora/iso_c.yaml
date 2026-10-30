@@ -1,0 +1,6 @@
+defaults: [models/llama3_8b_lora, methods/iso_c]
+method: {scale: 38.0}
+search:
+  mode: coordinate
+  params:
+    method.scale: [1.0, 3.0, 10.0, 30.0, 60.0, 100.0, 200.0]

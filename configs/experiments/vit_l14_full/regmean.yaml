@@ -1,0 +1,8 @@
+defaults: [models/vit_l14_full, methods/regmean]
+method: {alpha: 1.0, normalize_by_tokens: false, gram_spill_dir: outputs/cache}
+data:
+  calibration: {split: train, num_samples: all, batch_size: 32, seed: 420}
+search:
+  mode: grid
+  params:
+    method.alpha: [0.5, 0.7, 0.9, 1.0]

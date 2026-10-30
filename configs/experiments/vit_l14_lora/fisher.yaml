@@ -1,0 +1,8 @@
+defaults: [models/vit_l14_lora, methods/fisher]
+method: {scale: 1.0, fisher_normalize: none}
+data:
+  calibration: {split: train, num_samples: all, batch_size: 4, seed: 420}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.75, 1.0, 1.5, 2.0]

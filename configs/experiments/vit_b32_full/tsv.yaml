@@ -1,0 +1,6 @@
+defaults: [models/vit_b32_full, methods/tsv]
+method: {scale: 1.0}
+search:
+  mode: coordinate
+  params:
+    method.scale: [0.8, 1.0, 1.2, 1.5]

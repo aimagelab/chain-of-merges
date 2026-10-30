@@ -1,0 +1,40 @@
+model:
+  family: clip
+  base: openai/clip-vit-large-patch14
+  finetune: lora
+  head_dir: ViT-L-14-CLIP
+  tasks:
+    - stanford_cars
+    - dtd
+    - eurosat
+    - gtsrb
+    - mnist
+    - resisc45
+    - sun397
+    - svhn
+  checkpoints:
+    - hoffman-lab/KnOTS-ViT-L-14_lora_R16_stanford_cars
+    - hoffman-lab/KnOTS-ViT-L-14_lora_R16_dtd
+    - hoffman-lab/KnOTS-ViT-L-14_lora_R16_eurosat
+    - hoffman-lab/KnOTS-ViT-L-14_lora_R16_gtsrb
+    - hoffman-lab/KnOTS-ViT-L-14_lora_R16_mnist
+    - hoffman-lab/KnOTS-ViT-L-14_lora_R16_resisc45
+    - hoffman-lab/KnOTS-ViT-L-14_lora_R16_sun397
+    - hoffman-lab/KnOTS-ViT-L-14_lora_R16_svhn
+data:
+  root: data
+  num_workers: 8
+  calibration: {split: val, num_samples: 500, seed: 420, batch_size: 100}
+eval:
+  split: test
+  batch_size: 128
+  reference_acc:
+    stanford_cars: 99.76682729675113
+    dtd: 70.0531914893617
+    eurosat: 98.5925925925926
+    gtsrb: 97.19912905779888
+    mnist: 99.525
+    resisc45: 95.6984126984127
+    sun397: 79.59697732997482
+    svhn: 97.72399884759434
+seed: 420
